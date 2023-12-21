@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumiendo API</title>
+  <style>
+    #usuarios {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .borrar {
+      border: none;
+      padding: 8px 16px;
+      background-color: red;
+      color: white;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .editar {
+      border: none;
+      padding: 8px 16px;
+      background-color: blue;
+      color: white;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    form {
+      margin-bottom: 1em;
+    }
+
+    .usuario {
+      padding: 12px 5px;
+      border-radius: 10px;
+      box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.318);
+      border: 1px solid gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Usuarios</h1>
+
+  <form id="form">
+    <input id="nombre" type="text" placeholder="nombre" required> <br>
+    <input id="apellido" type="text" placeholder="apellido" required> <br>
+    <input id="edad" type="number" placeholder="edad"> <br required>
+    <input id="fecha_nacimiento" type="date" placeholder="fecha de nacimiento"> <br>
+
+    <button type="submit" id="btn-submit">Crear Usuario</button>
+  </form>
+
+  <section id="usuarios"></section>
+
+  <script src="app.js" ></script>
+</body>
+</html>
